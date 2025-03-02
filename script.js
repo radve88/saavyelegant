@@ -15,3 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Thank you for your feedback! We will get in touch soon.");
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const mediaElements = document.querySelectorAll(".category img, .category video");
+
+    function revealOnScroll() {
+        mediaElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                el.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // Run once when the page loads
+});
