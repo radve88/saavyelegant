@@ -174,16 +174,21 @@ button:hover {
     scroll-margin-top: 80px; /* Default for smartphones (Portrait) */
 }
 
+
+#about {
+    scroll-margin-top: 80px; /* Default for smartphones (Portrait) */
+}
+
 /* Adjust for tablets (screen width > 768px) */
 @media (min-width: 768px) {
     #about {
-        scroll-margin-top: 120px; /* Increase for tablets */
+        scroll-margin-top: 130px; /* Slightly increase for tablets */
     }
 }
 
 /* Additional Fix: Adjust for Landscape Mode */
 @media (orientation: landscape) {
     #about {
-        scroll-margin-top: 150px; /* Increase margin to avoid overscroll */
+        scroll-margin-top: 180px; /* Further increase to avoid overscroll */
     }
 }
