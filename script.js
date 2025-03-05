@@ -44,16 +44,4 @@ function scrollToSection(event, sectionId) {
         });
     }
 }
-async function fetchNews() {
-    try {
-        const response = await fetch("https://github.com/radve88/saavyelegant/blob/master/fonts/news.txt"));
-        const text = await response.text();
-        const messages = text.split("\n").filter(line => line.trim() !== "").join(" • ");
 
-        document.getElementById("news-content").textContent = messages || "Watch out for the latest stocks and promotions";
-    } catch (error) {
-        console.error("Error fetching news:", error);
-    }
-}
-
-fetchNews();
