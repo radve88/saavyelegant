@@ -44,4 +44,3 @@ function scrollToSection(event, sectionId) {
         });
     }
 }
-
