@@ -10,7 +10,7 @@ body {
 /* Header */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 15px 30px;
     background: #d4a5a5;
