@@ -30,3 +30,17 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", revealOnScroll);
     revealOnScroll(); // Run once when the page loads
 });
+function scrollToSection(event, sectionId) {
+    event.preventDefault(); // Prevent default jump behavior
+    let target = document.getElementById(sectionId);
+
+    if (target) {
+        let headerHeight = document.querySelector("header").offsetHeight; // Get fixed header height
+        let offsetPosition = target.offsetTop - headerHeight - 20; // Adjust position to avoid overshoot
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth" // Enables smooth scrolling
+        });
+    }
+}
